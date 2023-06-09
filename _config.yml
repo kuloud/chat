@@ -4,3 +4,6 @@ plugins:
 
 title: 知绘
 description: 知一点，绘一点
+
+show_downloads: true
+google_analytics: [Your Google Analytics tracking ID]
