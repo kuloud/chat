@@ -1,13 +1,43 @@
-remote_theme: pages-themes/minimal@v0.2.0
-plugins:
-- jekyll-remote-theme
-
 title: 知绘
 description: 知一点，绘一点
 
 show_downloads: true
 google_analytics: [Your Google Analytics tracking ID]
 
-# github:
-#   zip_url: http://example.com/download.zip
-#   another_url: another value
+color: '#f8f8f8'
+github: [metadata] # TODO What's this?
+github_repo: chat
+github_version: 1.0.0
+github_branch: main
+baseurl: '' # Keep as an empty string if served up at the root
+collections:
+  about:
+    name: 简介
+    output: true
+  # docs:
+  #   name: 文档
+  #   output: true
+  extra:
+    name: 更多
+    output: true
+
+screenshots:
+  - 'screen1.png'
+  - 'screen2.png'
+  - 'screen3.png'
+
+# Jekyll specific stuff
+author:
+  name: kuloud # Should appear in <head>.
+  email: support@mhive.cn
+  github: kuloud
+  website: https://kuloud.github.io
+plugins:
+  - jekyll-seo-tag # Add SEO tags
+permalink: /:categories/:title # Ensure permalinks have no date nor extension
+exclude: ['script', 'README.md'] # Exclude non-site files
+highlighter: rouge # Syntax highlighting/Users/kuloud/Downloads/CameraView-main/docs/_about /Users/kuloud/Downloads/CameraView-main/docs/_docs /Users/kuloud/Downloads/CameraView-main/docs/_extra /Users/kuloud/Downloads/CameraView-main/docs/_includes /Users/kuloud/Downloads/CameraView-main/docs/_layouts /Users/kuloud/Downloads/CameraView-main/docs/css /Users/kuloud/Downloads/CameraView-main/docs/Gemfile /Users/kuloud/Downloads/CameraView-main/docs/icons /Users/kuloud/Downloads/CameraView-main/docs/script /Users/kuloud/Downloads/CameraView-main/docs/static /Users/kuloud/Downloads/CameraView-main/docs/index.md /Users/kuloud/Downloads/CameraView-main/docs/home.md
+markdown: kramdown # Use the kramdown Markdown renderer
+kramdown:
+  input: GFM # Use Github Flavored Markdown
+

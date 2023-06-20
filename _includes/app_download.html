@@ -1,0 +1,21 @@
+<div class="app_bg" onclick="goDownload(true)"></div>
+<script>
+  function isWeixin() {
+    let ua = navigator.userAgent.toLowerCase();
+    return ua.indexOf("micromessenger") !== -1;
+  }
+  function isIos() {
+    let ua = navigator.userAgent.toLowerCase();
+    return ua.indexOf("iphone") > -1 || ua.indexOf("mac os") > -1;
+  }
+  function goDownload(wxClick) {
+    if (isIos()) {
+      window.location.href = "https://apps.apple.com/cn/app/id***";
+    } else if (isWeixin()) {
+      // 微信浏览器时点击弹出提示，其他浏览器直接触发下载
+      if (wxClick) alert("请点击右上角按钮, 选择使用浏览器打开");
+    } else {
+      window.location.href = "https://***.apk";
+    }
+  }
+</script>
