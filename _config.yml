@@ -9,7 +9,7 @@ github: [metadata] # TODO What's this?
 github_repo: chat
 github_version: 1.0.0
 github_branch: main
-baseurl: '' # Keep as an empty string if served up at the root
+baseurl: '/chat' # Keep as an empty string if served up at the root
 collections:
   about:
     name: 简介
